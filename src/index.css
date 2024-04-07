@@ -1,0 +1,140 @@
+/* styles.css */
+:root {
+  --primary-color: #007bff; /* blue */
+  --secondary-color: #6c757d; /* gray */
+  --accent-color: #28a745; /* green */
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.app h1 {
+  text-align: center;
+}
+/* 1.  CarForm */
+.car-form {
+  border-bottom: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.car-form .form-group {
+  margin-bottom: 15px;
+}
+
+.car-form label {
+  display: block;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.car-form input[type="text"],
+.car-form input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Darker shade of primary color on hover */
+}
+
+/* 2.  CarSearch */
+.car-search {
+  border-bottom: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-search h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--primary-color);
+  flex: 1;
+}
+
+.car-search .search-input {
+  padding: 8px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
+}
+
+/* 3. CarList */
+.car-list {
+  /* border: 1px solid var(--secondary-color); */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* styles.css (continued) */
+.car-list {
+  border-bottom: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+.car-list h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.car-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.car-list li {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 3px;
+}
+
+/* 4. CarValue */
+.car-value {
+  /* border: 1px solid var(--secondary-color); */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.car-value h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--primary-color);
+}
