@@ -1,5 +1,6 @@
 // CarList.jsx
 import { useSelector, useDispatch } from "react-redux";
+import { deleteCar } from "../store";
 
 export default function CarList() {
   const dispatch = useDispatch();
@@ -8,6 +9,9 @@ export default function CarList() {
     return state.data.cars;
   });
 
+  const handleDelete = (id) => {
+    dispatch(deleteCar(id));
+  };
   console.log(cars);
   return (
     <div className="car-list">
@@ -15,7 +19,7 @@ export default function CarList() {
       <ul>
         {cars.map((car, index) => (
           <li
-            key={index}
+            key={car.id}
             className="car"
           >
             <div className="car-info">
@@ -23,7 +27,12 @@ export default function CarList() {
               <span className="car-cost">$ {car.cost}</span>
             </div>
 
-            <button className="delete-button">Delete</button>
+            <button
+              className="delete-button"
+              onClick={() => handleDelete(car.id)}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>

@@ -26,7 +26,7 @@ const carsSlice = createSlice({
     },
     deleteCar(state, action) {
       // action.payload is going to be an id we pass from the component
-      state.cars = state.filter((car) => car.id !== action.payload);
+      state.cars = state.cars.filter((car) => car.id !== action.payload);
     },
   },
 });
