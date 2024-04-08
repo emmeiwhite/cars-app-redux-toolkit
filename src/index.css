@@ -2,7 +2,11 @@
 :root {
   --primary-color: #007bff; /* blue */
   --secondary-color: #6c757d; /* gray */
-  --accent-color: #28a745; /* green */
+  --accent-color: #02cf32; /* green */
+}
+
+button {
+  cursor: pointer;
 }
 
 .app {
@@ -11,7 +15,7 @@
   margin: 0 auto;
   padding: 10px;
   border: 1px solid var(--secondary-color);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .app h1 {
@@ -48,7 +52,8 @@
   border-radius: 3px;
 }
 
-.submit-button {
+.submit-button,
+.delete-button {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -120,6 +125,31 @@
   background-color: var(--accent-color);
   color: white;
   border-radius: 3px;
+}
+
+.car-list .car {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-info {
+  display: flex;
+  gap: 3rem;
+  text-transform: capitalize;
+  align-items: center;
+}
+
+.car-name {
+  font-size: 1.5rem;
+  color: rgb(60, 0, 255);
+  font-weight: 900;
+}
+
+.car-cost {
+  font-size: 1.5rem;
+  color: rgb(67, 42, 165);
+  font-weight: 700;
 }
 
 /* 4. CarValue */

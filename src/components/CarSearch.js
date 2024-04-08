@@ -1,7 +1,15 @@
-// CarSearch.jsx
-import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changeSearchTerm } from "../store";
 
 export default function CarSearch() {
+  const dispatch = useDispatch();
+
+  const search = useSelector((state) => {
+    return state.data.searchTerm;
+  });
+  const handleChange = (e) => {
+    dispatch(changeSearchTerm(e.target.value));
+  };
   return (
     <div className="car-search">
       <h2>My Cars</h2>
@@ -9,6 +17,8 @@ export default function CarSearch() {
         className="search-input"
         type="text"
         placeholder="Search..."
+        onChange={handleChange}
+        value={search}
       />
     </div>
   );
