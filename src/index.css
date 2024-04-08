@@ -1,6 +1,6 @@
 /* styles.css */
 :root {
-  --primary-color: #007bff; /* blue */
+  --primary-color: #3300ff; /* blue */
   --secondary-color: #6c757d; /* gray */
   --accent-color: #02cf32; /* green */
 }
@@ -41,7 +41,7 @@ button {
 .car-form label {
   display: block;
   font-weight: bold;
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
 }
 
 .car-form input[type="text"],
@@ -54,7 +54,7 @@ button {
 
 .submit-button,
 .delete-button {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -75,13 +75,14 @@ button {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .car-search h2 {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 20px;
-  color: var(--primary-color);
+  font-size: 28px;
+  /* color: var(--primary-color); */
   flex: 1;
 }
 
@@ -110,8 +111,8 @@ button {
 .car-list h2 {
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 20px;
-  color: var(--primary-color);
+  font-size: 24px;
+  /* color: var(--primary-color); */
 }
 
 .car-list ul {
@@ -122,7 +123,7 @@ button {
 .car-list li {
   margin-bottom: 10px;
   padding: 5px 10px;
-  background-color: var(--accent-color);
+  box-shadow: 5px 5px 6px #ccc;
   color: white;
   border-radius: 3px;
 }
@@ -141,14 +142,14 @@ button {
 }
 
 .car-name {
-  font-size: 1.5rem;
-  color: rgb(60, 0, 255);
+  font-size: 1.25rem;
+  color: brown;
   font-weight: 900;
 }
 
 .car-cost {
-  font-size: 1.5rem;
-  color: rgb(67, 42, 165);
+  font-size: 1.25rem;
+  color: brown;
   font-weight: 700;
 }
 
@@ -163,8 +164,6 @@ button {
 }
 
 .car-value h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-top: 1rem;
   font-size: 20px;
-  color: var(--primary-color);
 }

@@ -32,8 +32,10 @@ export default function CarForm() {
     dispatch(addCar({ name: carName, cost: carCost }));
 
     // reset the form fields | Same long route of dispatching action to mini-reducers to do this
+    /* --- Let's use extraReducer technique ao that car/addCar type is watched by the FormCombinedReducer as well
     dispatch(changeCost(0));
     dispatch(changeName(""));
+    --- */
   };
 
   return (
