@@ -6,7 +6,13 @@ export default function CarList() {
   const dispatch = useDispatch();
 
   const cars = useSelector((state) => {
-    return state.data.cars;
+    const {
+      data: { cars, searchTerm },
+    } = state;
+    return cars.filter((car) =>
+      car.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    // return state.data.cars;
   });
 
   const handleDelete = (id) => {
