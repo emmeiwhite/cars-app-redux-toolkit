@@ -5,13 +5,20 @@ import { deleteCar } from "../store";
 export default function CarList() {
   const dispatch = useDispatch();
 
-  const cars = useSelector((state) => {
+  const { cars, name } = useSelector((state) => {
     const {
+      form,
       data: { cars, searchTerm },
     } = state;
-    return cars.filter((car) =>
+
+    const filteredCars = cars.filter((car) =>
       car.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    return {
+      cars: filteredCars,
+      name: form.name,
+    };
     // return state.data.cars;
   });
 
@@ -23,24 +30,31 @@ export default function CarList() {
     <div className="car-list">
       <h2>Car List</h2>
       <ul>
-        {cars.map((car, index) => (
-          <li
-            key={car.id}
-            className="car"
-          >
-            <div className="car-info">
-              <span className="car-name">{car.name}</span>
-              <span className="car-cost">$ {car.cost}</span>
-            </div>
+        {cars.map((car) => {
+          // Decide if the car should be bold
+          /**Logic to make the matched string bold  */
+          const bold =
+            name && car.name.toLowerCase().includes(name.toLowerCase());
 
-            <button
-              className="delete-button"
-              onClick={() => handleDelete(car.id)}
+          return (
+            <li
+              key={car.id}
+              className={`${bold && "matched"} car`}
             >
-              Delete
-            </button>
-          </li>
-        ))}
+              <div className="car-info">
+                <span className="car-name">{car.name}</span>
+                <span className="car-cost">$ {car.cost}</span>
+              </div>
+
+              <button
+                className="delete-button"
+                onClick={() => handleDelete(car.id)}
+              >
+                Delete
+              </button>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
